@@ -1,7 +1,8 @@
 <template lang="pug">
 .layout-sider 
     Menu(
-        theme="dark"
+        theme="dark",
+        :active-name="routeName"
     )
         MenuItem(v-for="item in menu", :name="item.name", :to="item.name", :key="item.name") {{item.meta.name}}
 </template>
@@ -15,7 +16,9 @@ export default {
         };
     },
     computed: {
-        
+        routeName () {
+            return this.$route.name;
+        }
     },
     methods: {
         

@@ -10,6 +10,9 @@ Layout.main(style="height: 100%")
     Layout 
         Header.header-con 
         Content.main-content-con
+            Layout.main-layout-con  
+                Content.content-wrapper 
+                    router-view
 </template>
 
 <script>
